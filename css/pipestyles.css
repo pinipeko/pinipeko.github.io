@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+main
+{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+section
+{
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(135, 231, 226);
+}
+
+section h1
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.no-parallax
+{
+    background-color: #5333ed;
+    z-index: 999;
+    text-align: right;
+}
+
+.parallax h1
+{
+    width: 60%;
+    font-size: 4rem;
+}
+
+.parallax::after
+{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg::after
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/fuji2.jpg");
+    background-size: cover;
+}
+
+ol
+{
+    font-size: 3rem;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 50%;
+}
+
+.botton
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+.botton h1
+{
+    position: relative;
+    font-family: monospace;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.botton::before
+{
+    content: " ";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+}
+
+.botton:hover::before
+{
+    animation: animate-top 1s linear forwards;
+    background-color: transparent;
+}
+
+@keyframes animate-top
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+        border-top-color: #fff;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50%
+    {
+        width: 100%;
+        height: 0;
+        border-top-color: #ffffff;
+        border-right-color: #fff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100%
+    {
+        width: 100%;
+        height: 100%;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.botton::after
+{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    border: 5px solid #000;
+}
+
+.botton:hover::after
+{
+    animation: animate-bottom 1s linear forwards;
+}
+
+@keyframes animate-bottom
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #fff;
+    }
+    50%
+    {
+        width: 0;
+        height: 50%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #fff;
+        border-left-color: #fff;
+    }
+    100%
+    {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #fff;
+        border-left-color: #fff;
+    }
+}
+
+.bg2
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/cielo.jpg");
+    background-size: cover; 
+}
+
+.bg3
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/atardecer.jpg");
+    background-size: cover;
+}
+
+.bg4
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/triunfo.jpg");
+    background-size: cover;
+}
+
+.bg5
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/japos.jpg");
+    background-size: cover;
+}
+
+.bg6
+
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/anochecer.jpg");
+    background-size: cover;
+}
+
+.bg7
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/amiguos.jpg");
+    background-size: cover;
+}
+
+.bg8
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/skate.jpg");
+    background-size: cover;
+}
+
+.bg9
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/metal.jpg");
+    background-size: cover;
+}
+
+.bg10
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./images/viaje.jpg");
+    background-size: cover;  
+}
